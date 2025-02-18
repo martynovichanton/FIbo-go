@@ -1,3 +1,3 @@
 # Fibonacci Go
 
-## Recursive Fibonacci implementation in Go with goroutines 
+## Recursive Fibonacci implementation in Go with goroutines and channels
