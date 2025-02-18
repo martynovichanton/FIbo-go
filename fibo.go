@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
+	"strconv"
 	"sync"
 	"time"
 )
@@ -18,7 +20,11 @@ func fibo(n int64) int64 {
 func main() {
     start := time.Now()
 
-    var nums int64 = 41
+    nums, err := strconv.ParseInt(os.Args[1], 10, 64)
+    if err != nil {
+        panic(err)
+    }
+
     arr := make([]int64, nums)
 
     // single threaded
